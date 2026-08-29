@@ -1,4 +1,8 @@
 ## Unreleased
+- Reuna staging release `0.2.1~alpha1`: includes upstream's H2 0.13
+  compatibility and Lwt body-flush fixes required by the CometBFT, Cosmos and
+  TRON transports. This staging branch remains an attributed mirror of
+  `dialohq/ocaml-grpc` until upstream publishes a successor to 0.2.0.
 - Fix bug in Grpc-lwt-client to fetch status code from response header ([#58](https://github.com/dialohq/ocaml-grpc/pull/58)) ([acerone85](https://github.com/acerone85)) review by ([@quernd](https://github.com/quernd))
 - Update Async dependency to v0.17.0 ([#62](https://github.com/dialohq/ocaml-grpc/pull/62) ([@tmcgilchrist](https://github.com/tmcgilchrist))
 

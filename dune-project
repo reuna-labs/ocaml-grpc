@@ -6,6 +6,8 @@
 
 (name grpc)
 
+(version 0.2.1~alpha1)
+
 (license "BSD-3-Clause")
 
 (authors
@@ -20,7 +22,7 @@
 (maintainers "Daniel Quernheim <grpc@quernd.uber.space>")
 
 (source
- (github dialohq/ocaml-grpc))
+ (github reuna-labs/ocaml-grpc))
 
 (documentation "https://dialohq.github.io/ocaml-grpc")
 

@@ -1,0 +1,22 @@
+name: reuna-release-gate
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  core-and-lwt:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        ocaml-compiler: ["4.14.2", "5.2.1"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ocaml/setup-ocaml@v3
+        with:
+          ocaml-compiler: ${{ matrix.ocaml-compiler }}
+          opam-local-packages: "grpc.opam grpc-lwt.opam"
+      - run: opam install -y --deps-only --with-test ./grpc.opam ./grpc-lwt.opam
+      - run: opam exec -- dune build -p grpc,grpc-lwt @install @runtest
