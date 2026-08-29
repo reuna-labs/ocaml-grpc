@@ -7,7 +7,7 @@ on:
 
 jobs:
   core-and-lwt:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, Linux, X64, reuna-builder-x86]
     strategy:
       fail-fast: false
       matrix:
