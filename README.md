@@ -5,9 +5,24 @@
 
 Pure OCaml implementation of gRPC over HTTP2.
 
+The Reuna compatibility release is public as `v0.2.1-alpha1`. It is alpha
+software and is not yet an independently reviewed production transport.
+See [SECURITY.md](SECURITY.md) for private reporting and the review boundary.
+
 Supported features:
  * RPCs: unary, server streaming, client streaming, bidirectional streaming
  * Client (Eio, Lwt and Async), server (Eio, Lwt and Async)
+
+## Install
+
+```sh
+opam repository add reuna https://github.com/reuna-labs/opam-repository.git
+opam update
+opam install grpc.0.2.1~alpha1 grpc-lwt.0.2.1~alpha1
+```
+
+The overlay release carries the HTTP/2 compatibility needed by the Reuna Web3
+package train and does not require an upstream release or development pin.
 
 ## Getting Started
 
